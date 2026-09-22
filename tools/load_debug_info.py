@@ -5,7 +5,7 @@ import os
 
 # Add the parent directory to sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from utils import plot_training_results
+from src.utils.utils import plot_training_results
 
 type_of_files = ['vaccuracy', 'vloss', 'accuracy', 'loss']
 vaccuracy_merged_list = []  # Initialize an empty dictionary to merge all dictionaries into

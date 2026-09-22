@@ -1,7 +1,9 @@
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import torch
 import numpy as np
 import torchmetrics
-from main import single_activity_accuracy
+from src.models.main import single_activity_accuracy
 
 
 def test_single_activity_accuracy_all_correct():
