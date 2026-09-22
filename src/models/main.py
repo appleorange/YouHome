@@ -4,9 +4,9 @@ import argparse,math,numpy as np
 import torchmetrics
 import seaborn as sns
 
-from load_data import get_data
-from config_args import get_args
-from model_testing_result import ModelTestingResult
+from src.data.load_data import get_data
+from src.utils.config_args import get_args
+from src.models.model_testing_result import ModelTestingResult
 
 from pdb import set_trace as stop
 import torchvision.models as models
@@ -14,7 +14,7 @@ from torch.optim.lr_scheduler import StepLR, ReduceLROnPlateau, CosineAnnealingL
 from tqdm import tqdm
 from datetime import datetime
 import matplotlib.pyplot as plt
-from utils import plot_training_results
+from src.utils.utils import plot_training_results
 
 def save_model(epoch, model, optimizer, loss, file_path="model_checkpoint.pth"):
     """

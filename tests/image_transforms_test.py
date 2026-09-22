@@ -1,8 +1,10 @@
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-from image_transforms import ContourDilationErosion
-from image_transforms import ContourThicknessVariation
+from src.data.image_transforms import ContourDilationErosion
+from src.data.image_transforms import ContourThicknessVariation
 from torchvision.transforms import v2
 from PIL import Image
 

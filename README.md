@@ -32,9 +32,33 @@ The project uses the **YouHome Activities-of-Daily-Living (ADL) dataset**, conta
 
 ---
 
+## Project structure
+
+```
+YouHome/
+├── src/
+│   ├── data/        # dataset loading and image transforms
+│   ├── models/       # training entry point and evaluation
+│   └── utils/         # shared helpers, config parsing, sobel filtering
+├── tests/          # unit/experiment scripts
+├── tools/          # data exploration and debugging scripts
+└── README.md
+```
+
 ## Installation
 
 ```bash
 git clone https://github.com/appleorange/YouHome.git
 cd YouHome
 pip install -r requirements.txt
+```
+
+## Usage
+
+Run everything from the repository root so the `src` package resolves correctly:
+
+```bash
+python -m src.models.main [args]   # train/evaluate a model
+python tests/test_main.py          # run a test script directly
+python tools/load_debug_info.py    # run a tools script directly
+```

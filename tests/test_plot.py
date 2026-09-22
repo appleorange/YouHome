@@ -1,3 +1,5 @@
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 import matplotlib.pyplot as plt
 
 # creata a myPlot function to plot two series in the same plot. The inputs are the two series and the title of the plot. The function should save the plot as "loss_history.png" in the current directory.

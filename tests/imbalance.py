@@ -1,3 +1,5 @@
+import sys, os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 """
 This code is for dealing with imbalanced datasets in PyTorch. Imbalanced datasets 
 are those where the number of samples in one or more classes is significantly lower 
@@ -39,8 +41,7 @@ import torchvision.transforms as transforms
 import torch.nn as nn
 
 import sys
-sys.path.append('/Users/yinghong_imac/Sabella Research Project/codes/')
-from youhome_dataset import YouHomeDataset
+from src.data.youhome_dataset import YouHomeDataset
 
 
 # Methods for dealing with imbalanced datasets:
